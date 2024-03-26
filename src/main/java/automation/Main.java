@@ -1,5 +1,7 @@
 package automation;
 
+import java.util.Arrays;
+
 public class Main {
     public static boolean kiem_tra_password(String password){
         String test =  "((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%!]).{8,20})";

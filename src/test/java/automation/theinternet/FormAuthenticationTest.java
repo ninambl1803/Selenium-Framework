@@ -1,22 +1,34 @@
 package automation.theinternet;
 
+import automation.csv.beans.LoginBean;
+import automation.csv.examples.sync.CsvReaderExamples;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+
 public class FormAuthenticationTest {
     WebDriver driver;
+    List<LoginBean> lstLogin;
     @BeforeClass
-    void setup(){
+    void setup() {
         driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/login");
     }
     @Test
     void loginSuccessfulWithValidCredentials() {
+        WebDriver driver;
+        driver = new ChromeDriver();
+        driver.get("https://the-internet.herokuapp.com/login");
         driver.findElement(By.id("username")).sendKeys("tomsmith");
         driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
         driver.findElement(By.cssSelector("button[type=submit]")).click();

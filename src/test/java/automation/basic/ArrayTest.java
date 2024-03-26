@@ -1,11 +1,7 @@
 package automation.basic;
 
-import automation.Person;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.Arrays;
-import java.util.List;
 
 import static automation.Main.phan_tu_lon_nhat_trong_mang;
 import static automation.Main.swap;
